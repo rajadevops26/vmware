@@ -1,0 +1,3404 @@
+
+user@Rajamanoheryogi MINGW64 ~
+$ cd C
+bash: cd: C: No such file or directory
+
+user@Rajamanoheryogi MINGW64 ~
+$ cd /cmd/
+
+user@Rajamanoheryogi MINGW64 /cmd
+$ cd c:/
+
+user@Rajamanoheryogi MINGW64 /c
+$ cd Users/
+
+user@Rajamanoheryogi MINGW64 /c/Users
+$ cd ..
+
+user@Rajamanoheryogi MINGW64 /c
+$ cd Program Files
+bash: cd: too many arguments
+
+user@Rajamanoheryogi MINGW64 /c
+$ cd '/c/Program Files'
+
+user@Rajamanoheryogi MINGW64 /c/Program Files
+$ ls
+'Common Files'/             'Windows Defender'/
+ DellTPad/                  'Windows Defender Advanced Threat Protection'/
+ desktop.ini                'Windows Mail'/
+'Docker Toolbox'/           'Windows Media Player'/
+'internet explorer'/        'Windows Multimedia Platform'/
+'Microsoft Office'/         'windows nt'/
+'Mozilla Firefox'/          'Windows Photo Viewer'/
+ MSBuild/                   'Windows Portable Devices'/
+ net.downloadhelper.coapp/  'Windows Security'/
+ Oracle/                    'Windows Sidebar'/
+'Reference Assemblies'/      WindowsApps/
+ rempl/                      WindowsPowerShell/
+'Uninstall Information'/
+
+user@Rajamanoheryogi MINGW64 /c/Program Files
+$ cd Docker\ Toolbox/
+
+user@Rajamanoheryogi MINGW64 /c/Program Files/Docker Toolbox
+$ ls
+boot2docker.iso      docker-machine.exe*             unins000.dat
+docker.exe*          docker-quickstart-terminal.ico  unins000.exe*
+docker-compose.exe*  start.sh*
+
+user@Rajamanoheryogi MINGW64 /c/Program Files/Docker Toolbox
+$ docker-machine.exe -D create --driver virtualbox dev
+Docker Machine Version:  0.14.0, build 89b8332
+Found binary path at C:\Program Files\Docker Toolbox\docker-machine.exe
+Launching plugin server for driver virtualbox
+Plugin server listening at address 127.0.0.1:51338
+() Calling .GetVersion
+Using API Version  1
+() Calling .SetConfigRaw
+() Calling .GetMachineName
+(flag-lookup) Calling .GetMachineName
+(flag-lookup) Calling .DriverName
+(flag-lookup) Calling .GetCreateFlags
+Found binary path at C:\Program Files\Docker Toolbox\docker-machine.exe
+Launching plugin server for driver virtualbox
+Plugin server listening at address 127.0.0.1:51342
+() Calling .GetVersion
+Using API Version  1
+() Calling .SetConfigRaw
+() Calling .GetMachineName
+(dev) Calling .GetMachineName
+(dev) Calling .DriverName
+(dev) Calling .GetCreateFlags
+(dev) Calling .SetConfigFromFlags
+Creating CA: C:\Users\user\.docker\machine\certs\ca.pem
+Creating client certificate: C:\Users\user\.docker\machine\certs\cert.pem
+Running pre-create checks...
+(dev) Calling .PreCreateCheck
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe --version
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | 5.2.8r121009
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | Hyper-V is not installed.
+(dev) DBG | %!(EXTRA *exec.Error=exec: "vmms.exe": executable file not found in %PATH%)COMMAND: wmic cpu get VirtualizationFirmwareEnabled
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | VirtualizationFirmwareEnabled
+(dev) DBG | TRUE
+(dev) DBG |
+(dev) DBG | }
+(dev) Image cache directory does not exist, creating it at C:\Users\user\.docker\machine\cache...
+(dev) No default Boot2Docker ISO found locally, downloading the latest release...
+(dev) Latest release for github.com/boot2docker/boot2docker is v18.09.3
+(dev) Downloading C:\Users\user\.docker\machine\cache\boot2docker.iso from https://github.com/boot2docker/boot2docker/releases/download/v18.09.3/boot2docker.iso...
+(dev) 0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | Name:            VirtualBox Host-Only Ethernet Adapter #2
+(dev) DBG | GUID:            c8fa0dd9-ea98-43b2-9f08-01939aeb4783
+(dev) DBG | DHCP:            Disabled
+(dev) DBG | IPAddress:       192.168.56.1
+(dev) DBG | NetworkMask:     255.255.255.0
+(dev) DBG | IPV6Address:     fe80::7d:950:ec7c:c3d6
+(dev) DBG | IPV6NetworkMaskPrefixLength: 64
+(dev) DBG | HardwareAddress: 0a:00:27:00:00:16
+(dev) DBG | MediumType:      Ethernet
+(dev) DBG | Wireless:        No
+(dev) DBG | Status:          Up
+(dev) DBG | VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+(dev) DBG |
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) Calling .GetConfigRaw
+Creating machine...
+(dev) Calling .Create
+(dev) DBG | local Boot2Docker ISO version:  v18.09.3
+(dev) Copying C:\Users\user\.docker\machine\cache\boot2docker.iso to C:\Users\user\.docker\machine\machines\dev\boot2docker.iso...
+(dev) Creating VirtualBox VM...
+(dev) Creating SSH key...
+(dev) DBG | Creating disk image...
+(dev) DBG | Creating 20000 MB hard disk image...
+(dev) DBG | Writing magic tar header
+(dev) DBG | Writing SSH key tar header
+(dev) DBG | Calling inner createDiskImage
+(dev) DBG | &{C:\Program Files\Oracle\VirtualBox\VBoxManage.exe [C:\Program Files\Oracle\VirtualBox\VBoxManage.exe convertfromraw stdin C:\Users\user\.docker\machine\machines\dev\disk.vmdk 20971520000 --format VMDK] []  <nil> <nil> <nil> [] <nil> <nil> <nil> <nil> <nil> false [] [] [] [] <nil> <nil>}
+(dev) DBG | Starting command
+(dev) DBG | Copying to stdin
+(dev) DBG | Filling zeroes
+(dev) DBG | Closing STDIN
+(dev) DBG | Waiting on cmd
+(dev) DBG | Converting from raw image file="stdin" to file="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"...
+(dev) DBG | Creating dynamic image with size 20971520000 bytes (20000MB)...
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe createvm --basefolder C:\Users\user\.docker\machine\machines\dev --name dev --register
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | Virtual machine 'dev' is created and registered.
+(dev) DBG | UUID: 4923f765-9c92-46a0-93da-4fcfe8730c6b
+(dev) DBG | Settings file: 'C:\Users\user\.docker\machine\machines\dev\dev\dev.vbox'
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | VM CPUS: 1
+(dev) DBG | VM Memory: 1024
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm dev --firmware bios --bioslogofadein off --bioslogofadeout off --bioslogodisplaytime 0 --biosbootmenu disabled --ostype Linux26_64 --cpus 1 --memory 1024 --acpi on --ioapic on --rtcuseutc on --natdnshostresolver1 off --natdnsproxy1 on --cpuhotplug off --pae on --hpet on --hwvirtex on --nestedpaging on --largepages on --vtxvpid on --accelerate3d off --boot1 dvd
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm dev --nic1 nat --nictype1 82540EM --cableconnected1 on
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe storagectl dev --name SATA --add sata --hostiocache on
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe storageattach dev --storagectl SATA --port 0 --device 0 --type dvddrive --medium C:\Users\user\.docker\machine\machines\dev\boot2docker.iso
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe storageattach dev --storagectl SATA --port 1 --device 0 --type hdd --medium C:\Users\user\.docker\machine\machines\dev\disk.vmdk
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe guestproperty set dev /VirtualBox/GuestAdd/SharedFolders/MountPrefix /
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe guestproperty set dev /VirtualBox/GuestAdd/SharedFolders/MountDir /
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | setting up shareDir '\\?\c:\Users' -> 'c/Users'
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe sharedfolder add dev --name c/Users --hostpath \\?\c:\Users --automount
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe setextradata dev VBoxInternal2/SharedFoldersEnableSymlinksCreate/c/Users 1
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) Starting the VM...
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="poweroff"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:09:01.537000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | nic2="none"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+(dev) Check network to re-create if needed...
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | Name:            VirtualBox Host-Only Ethernet Adapter #2
+(dev) DBG | GUID:            c8fa0dd9-ea98-43b2-9f08-01939aeb4783
+(dev) DBG | DHCP:            Disabled
+(dev) DBG | IPAddress:       192.168.56.1
+(dev) DBG | NetworkMask:     255.255.255.0
+(dev) DBG | IPV6Address:     fe80::7d:950:ec7c:c3d6
+(dev) DBG | IPV6NetworkMaskPrefixLength: 64
+(dev) DBG | HardwareAddress: 0a:00:27:00:00:16
+(dev) DBG | MediumType:      Ethernet
+(dev) DBG | Wireless:        No
+(dev) DBG | Status:          Up
+(dev) DBG | VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+(dev) DBG |
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) Windows might ask for the permission to create a network adapter. Sometimes, such confirmation window is minimized in the taskbar.
+(dev) DBG | Searching for hostonly interface for IPv4: 192.168.99.1 and Mask: ffffff00
+(dev) DBG | Not found
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe hostonlyif create
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | Interface 'VirtualBox Host-Only Ethernet Adapter #3' was successfully created
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | Name:            VirtualBox Host-Only Ethernet Adapter #3
+(dev) DBG | GUID:            b9a84644-e5cc-45a9-bb06-16c034b3c45c
+(dev) DBG | DHCP:            Disabled
+(dev) DBG | IPAddress:       192.168.238.1
+(dev) DBG | NetworkMask:     255.255.255.0
+(dev) DBG | IPV6Address:     fe80::f5fa:321:20e9:a244
+(dev) DBG | IPV6NetworkMaskPrefixLength: 64
+(dev) DBG | HardwareAddress: 0a:00:27:00:00:48
+(dev) DBG | MediumType:      Ethernet
+(dev) DBG | Wireless:        No
+(dev) DBG | Status:          Up
+(dev) DBG | VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #3
+(dev) DBG |
+(dev) DBG | Name:            VirtualBox Host-Only Ethernet Adapter #2
+(dev) DBG | GUID:            c8fa0dd9-ea98-43b2-9f08-01939aeb4783
+(dev) DBG | DHCP:            Disabled
+(dev) DBG | IPAddress:       192.168.56.1
+(dev) DBG | NetworkMask:     255.255.255.0
+(dev) DBG | IPV6Address:     fe80::7d:950:ec7c:c3d6
+(dev) DBG | IPV6NetworkMaskPrefixLength: 64
+(dev) DBG | HardwareAddress: 0a:00:27:00:00:16
+(dev) DBG | MediumType:      Ethernet
+(dev) DBG | Wireless:        No
+(dev) DBG | Status:          Up
+(dev) DBG | VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+(dev) DBG |
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) Found a new host-only adapter: "VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe hostonlyif ipconfig VirtualBox Host-Only Ethernet Adapter #3 --ip 192.168.99.1 --netmask 255.255.255.0
+(dev) Windows might ask for the permission to configure a network adapter. Sometimes, such confirmation window is minimized in the taskbar.
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list dhcpservers
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | NetworkName:    HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+(dev) DBG | IP:             192.168.56.100
+(dev) DBG | NetworkMask:    255.255.255.0
+(dev) DBG | lowerIPAddress: 192.168.56.101
+(dev) DBG | upperIPAddress: 192.168.56.254
+(dev) DBG | Enabled:        Yes
+(dev) DBG |
+(dev) DBG | NetworkName:    HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+(dev) DBG | IP:             192.168.56.2
+(dev) DBG | NetworkMask:    255.255.255.0
+(dev) DBG | lowerIPAddress: 192.168.56.3
+(dev) DBG | upperIPAddress: 192.168.56.254
+(dev) DBG | Enabled:        Yes
+(dev) DBG |
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | Removing orphan DHCP servers...
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | Name:            VirtualBox Host-Only Ethernet Adapter #3
+(dev) DBG | GUID:            b9a84644-e5cc-45a9-bb06-16c034b3c45c
+(dev) DBG | DHCP:            Disabled
+(dev) DBG | IPAddress:       192.168.99.1
+(dev) DBG | NetworkMask:     255.255.255.0
+(dev) DBG | IPV6Address:     fe80::f5fa:321:20e9:a244
+(dev) DBG | IPV6NetworkMaskPrefixLength: 64
+(dev) DBG | HardwareAddress: 0a:00:27:00:00:48
+(dev) DBG | MediumType:      Ethernet
+(dev) DBG | Wireless:        No
+(dev) DBG | Status:          Up
+(dev) DBG | VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #3
+(dev) DBG |
+(dev) DBG | Name:            VirtualBox Host-Only Ethernet Adapter #2
+(dev) DBG | GUID:            c8fa0dd9-ea98-43b2-9f08-01939aeb4783
+(dev) DBG | DHCP:            Disabled
+(dev) DBG | IPAddress:       192.168.56.1
+(dev) DBG | NetworkMask:     255.255.255.0
+(dev) DBG | IPV6Address:     fe80::7d:950:ec7c:c3d6
+(dev) DBG | IPV6NetworkMaskPrefixLength: 64
+(dev) DBG | HardwareAddress: 0a:00:27:00:00:16
+(dev) DBG | MediumType:      Ethernet
+(dev) DBG | Wireless:        No
+(dev) DBG | Status:          Up
+(dev) DBG | VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+(dev) DBG |
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe dhcpserver remove --netname HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | Adding/Modifying DHCP server "192.168.99.22" with address range "192.168.99.100" - "192.168.99.254"...
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list dhcpservers
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | NetworkName:    HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+(dev) DBG | IP:             192.168.56.2
+(dev) DBG | NetworkMask:    255.255.255.0
+(dev) Windows might ask for the permission to configure a dhcp server. Sometimes, such confirmation window is minimized in the taskbar.
+(dev) DBG | lowerIPAddress: 192.168.56.3
+(dev) DBG | upperIPAddress: 192.168.56.254
+(dev) DBG | Enabled:        Yes
+(dev) DBG |
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe dhcpserver add --netname HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #3 --ip 192.168.99.22 --netmask 255.255.255.0 --lowerip 192.168.99.100 --upperip 192.168.99.254 --enable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm dev --nic2 hostonly --nictype2 82540EM --nicpromisc2 deny --hostonlyadapter2 VirtualBox Host-Only Ethernet Adapter #3 --cableconnected2 on
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm dev --natpf1 delete ssh
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | VBoxManage.exe: error: Code E_INVALIDARG (0x80070057) - One or more arguments are invalid (extended info not available)
+(dev) DBG | VBoxManage.exe: error: Context: "RemoveRedirect(Bstr(ValueUnion.psz).raw())" at line 1860 of file VBoxManageModifyVM.cpp
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm dev --natpf1 ssh,tcp,127.0.0.1,51362,,22
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe startvm dev --type headless
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | Waiting for VM "dev" to power on...
+(dev) DBG | VM "dev" has been successfully started.
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | Checking vm logs: C:\Users\user\.docker\machine\machines\dev\dev\Logs\VBox.log
+(dev) DBG | Getting to WaitForSSH function...
+(dev) Waiting for an IP...
+(dev) DBG | Using SSH client type: external
+(dev) DBG | &{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+(dev) DBG | About to run SSH command:
+(dev) DBG | exit 0
+(dev) DBG | SSH cmd err, output: <nil>:
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | Host-only MAC: 080027510509
+(dev) DBG |
+(dev) DBG | Using SSH client type: external
+(dev) DBG | &{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+(dev) DBG | About to run SSH command:
+(dev) DBG | ip addr show
+(dev) DBG | SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+(dev) DBG |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+(dev) DBG |     inet 127.0.0.1/8 scope host lo
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 ::1/128 scope host
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:93:cc:ab brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe93:ccab/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:51:05:09 brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 192.168.99.100/24 brd 192.168.99.255 scope global eth1
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe51:509/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+(dev) DBG |     link/sit 0.0.0.0 brd 0.0.0.0
+(dev) DBG |
+(dev) DBG | SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+(dev) DBG |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+(dev) DBG |     inet 127.0.0.1/8 scope host lo
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 ::1/128 scope host
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:93:cc:ab brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe93:ccab/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:51:05:09 brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 192.168.99.100/24 brd 192.168.99.255 scope global eth1
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe51:509/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+(dev) DBG |     link/sit 0.0.0.0 brd 0.0.0.0
+(dev) DBG |
+(dev) DBG | END SSH
+(dev) DBG |
+(dev) DBG | IP is 192.168.99.100
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | Host-only MAC: 080027510509
+(dev) DBG |
+(dev) DBG | Using SSH client type: external
+(dev) DBG | &{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+(dev) DBG | About to run SSH command:
+(dev) DBG | ip addr show
+(dev) DBG | SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+(dev) DBG |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+(dev) DBG |     inet 127.0.0.1/8 scope host lo
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 ::1/128 scope host
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:93:cc:ab brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe93:ccab/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:51:05:09 brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 192.168.99.100/24 brd 192.168.99.255 scope global eth1
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe51:509/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+(dev) DBG |     link/sit 0.0.0.0 brd 0.0.0.0
+(dev) DBG |
+(dev) DBG | SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+(dev) DBG |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+(dev) DBG |     inet 127.0.0.1/8 scope host lo
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 ::1/128 scope host
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:93:cc:ab brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe93:ccab/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:51:05:09 brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 192.168.99.100/24 brd 192.168.99.255 scope global eth1
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe51:509/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+(dev) DBG |     link/sit 0.0.0.0 brd 0.0.0.0
+(dev) DBG |
+(dev) DBG | END SSH
+(dev) DBG |
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | Name:            VirtualBox Host-Only Ethernet Adapter #3
+(dev) DBG | GUID:            b9a84644-e5cc-45a9-bb06-16c034b3c45c
+(dev) DBG | DHCP:            Disabled
+(dev) DBG | IPAddress:       192.168.99.1
+(dev) DBG | NetworkMask:     255.255.255.0
+(dev) DBG | IPV6Address:     fe80::f5fa:321:20e9:a244
+(dev) DBG | IPV6NetworkMaskPrefixLength: 64
+(dev) DBG | HardwareAddress: 0a:00:27:00:00:48
+(dev) DBG | MediumType:      Ethernet
+(dev) DBG | Wireless:        No
+(dev) DBG | Status:          Up
+(dev) DBG | VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #3
+(dev) DBG |
+(dev) DBG | Name:            VirtualBox Host-Only Ethernet Adapter #2
+(dev) DBG | GUID:            c8fa0dd9-ea98-43b2-9f08-01939aeb4783
+(dev) DBG | DHCP:            Disabled
+(dev) DBG | IPAddress:       192.168.56.1
+(dev) DBG | NetworkMask:     255.255.255.0
+(dev) DBG | IPV6Address:     fe80::7d:950:ec7c:c3d6
+(dev) DBG | IPV6NetworkMaskPrefixLength: 64
+(dev) DBG | HardwareAddress: 0a:00:27:00:00:16
+(dev) DBG | MediumType:      Ethernet
+(dev) DBG | Wireless:        No
+(dev) DBG | Status:          Up
+(dev) DBG | VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+(dev) DBG |
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | Found: VirtualBox Host-Only Ethernet Adapter #3
+(dev) Calling .GetConfigRaw
+(dev) Calling .DriverName
+(dev) Calling .DriverName
+Waiting for machine to be running, this may take a few minutes...
+(dev) Calling .GetState
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+Detecting operating system of created instance...
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+Waiting for SSH to be available...
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+Getting to WaitForSSH function...
+(dev) DBG | effparavirtprovider="kvm"
+(dev) Calling .GetSSHHostname
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) Calling .GetSSHPort
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) Calling .GetSSHKeyPath
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) Calling .GetSSHKeyPath
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) Calling .GetSSHUsername
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+exit 0
+SSH cmd err, output: <nil>:
+Detecting the provisioner...
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+cat /etc/os-release
+SSH cmd err, output: <nil>: NAME=Boot2Docker
+VERSION=18.09.3
+ID=boot2docker
+ID_LIKE=tcl
+VERSION_ID=18.09.3
+PRETTY_NAME="Boot2Docker 18.09.3 (TCL 8.2.1)"
+ANSI_COLOR="1;34"
+HOME_URL="https://github.com/boot2docker/boot2docker"
+SUPPORT_URL="https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/"
+BUG_REPORT_URL="https://github.com/boot2docker/boot2docker/issues"
+
+found compatible host: boot2docker
+Provisioning with boot2docker...
+(dev) Calling .GetMachineName
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+sudo /usr/bin/sethostname dev && echo "dev" | sudo tee /var/lib/boot2docker/etc/hostname
+SSH cmd err, output: <nil>: Setting hostname to dev Done.
+dev
+
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+if ! type netstat 1>/dev/null; then ss -tln; else netstat -tln; fi
+SSH cmd err, output: <nil>: Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp        0      0 :::22                   :::*                    LISTEN
+
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+if ! type netstat 1>/dev/null; then ss -tln; else netstat -tln; fi
+SSH cmd err, output: <nil>: Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp        0      0 :::2376                 :::*                    LISTEN
+tcp        0      0 :::22                   :::*                    LISTEN
+
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+sudo mkdir -p /var/lib/boot2docker
+SSH cmd err, output: <nil>:
+(dev) Calling .GetMachineName
+(dev) Calling .GetIP
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | Host-only MAC: 080027510509
+(dev) DBG |
+(dev) DBG | Using SSH client type: external
+(dev) DBG | &{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+(dev) DBG | About to run SSH command:
+(dev) DBG | ip addr show
+(dev) DBG | SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+(dev) DBG |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+(dev) DBG |     inet 127.0.0.1/8 scope host lo
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 ::1/128 scope host
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:93:cc:ab brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe93:ccab/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:51:05:09 brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 192.168.99.100/24 brd 192.168.99.255 scope global eth1
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe51:509/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+(dev) DBG |     link/sit 0.0.0.0 brd 0.0.0.0
+Copying certs to the local machine directory...
+(dev) DBG |
+(dev) DBG | SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+(dev) DBG |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+(dev) DBG |     inet 127.0.0.1/8 scope host lo
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 ::1/128 scope host
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:93:cc:ab brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe93:ccab/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:51:05:09 brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 192.168.99.100/24 brd 192.168.99.255 scope global eth1
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe51:509/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+(dev) DBG |     link/sit 0.0.0.0 brd 0.0.0.0
+(dev) DBG |
+(dev) DBG | END SSH
+(dev) DBG |
+generating server cert: C:\Users\user\.docker\machine\machines\dev\server.pem ca-key=C:\Users\user\.docker\machine\certs\ca.pem private-key=C:\Users\user\.docker\machine\certs\ca-key.pem org=user.dev san=[192.168.99.100 localhost]
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+sudo /etc/init.d/docker stop
+SSH cmd err, output: <nil>: Stopping dockerd (2365)
+
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+if [ ! -z "$(ip link show docker0)" ]; then sudo ip link delete docker0; fi
+SSH cmd err, output: <nil>:
+Copying certs to the remote machine...
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+printf '%s' '-----BEGIN CERTIFICATE-----
+MIICzDCCAbSgAwIBAgIRALnOWCXt/ucqTC5mIyzWajMwDQYJKoZIhvcNAQELBQAw
+DzENMAsGA1UEChMEdXNlcjAeFw0xOTAzMTkxMTAzMDBaFw0yMjAzMDMxMTAzMDBa
+MA8xDTALBgNVBAoTBHVzZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQDXOp/ae62QfC/PeDVrY9aeE1/M+wsL8LNSDvS5ZCSuPPP6mF6htx3kR+IreHR8
+uXmjLJYvnfhPv1/mhjVXPhUFkJtRA4/zZoqrm65OGKeG6uqs+iCim2ZBpedjSqzr
+nx6nmmhPASZ2BnvfPXIIo3GsXSCMn2OILcKrAPpQyBaoE1Guf7kOdLTOLSS/DPOY
+WSxGiDlJ7ij8c/ex+rlSLrtir841xUQFKNh5YG/oRhmkccWqdtoPpjOAWtXVPCYZ
+ZDhv32EbMkWxMVjDrrhtZ18J87gqqgzy4RPSJiXgLRaN6crNBDDsZpEFbF0Bstng
+ZgKsjgCTbIZCOKc2kxRvhsEvAgMBAAGjIzAhMA4GA1UdDwEB/wQEAwICrDAPBgNV
+HRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCWk6sKH8TQdEzNBBM27IGJ
+hP59Pw5LEF/TZyUDLeBLiTDQxepeNtUA2kF1EQaxke4hxls8953NykTMShqjiYNj
+LAIfrC0xT1MtqsECxhmjKLpwRxJgEbnROfp5p0eMz/2plShuOEYoIzaIMLurer/z
+VSFsylzTsjZIc4suAkvdFlWiqnpz6IRzdX46a36G/eq7lrk4fUnGauM86KFJ82u2
+UpgwjVVzBx02plj2KUv3PTW++x1SWgya2vprAPDBJbrrk9OBvxh5ygvpooUrOTVN
+GgobJtFNdZuWKSLReeRtgw4/Jxbc+ska1TcCUHQIykazvd4RQncY8GM4xxv/bdHc
+-----END CERTIFICATE-----
+' | sudo tee /var/lib/boot2docker/ca.pem
+SSH cmd err, output: <nil>: -----BEGIN CERTIFICATE-----
+MIICzDCCAbSgAwIBAgIRALnOWCXt/ucqTC5mIyzWajMwDQYJKoZIhvcNAQELBQAw
+DzENMAsGA1UEChMEdXNlcjAeFw0xOTAzMTkxMTAzMDBaFw0yMjAzMDMxMTAzMDBa
+MA8xDTALBgNVBAoTBHVzZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQDXOp/ae62QfC/PeDVrY9aeE1/M+wsL8LNSDvS5ZCSuPPP6mF6htx3kR+IreHR8
+uXmjLJYvnfhPv1/mhjVXPhUFkJtRA4/zZoqrm65OGKeG6uqs+iCim2ZBpedjSqzr
+nx6nmmhPASZ2BnvfPXIIo3GsXSCMn2OILcKrAPpQyBaoE1Guf7kOdLTOLSS/DPOY
+WSxGiDlJ7ij8c/ex+rlSLrtir841xUQFKNh5YG/oRhmkccWqdtoPpjOAWtXVPCYZ
+ZDhv32EbMkWxMVjDrrhtZ18J87gqqgzy4RPSJiXgLRaN6crNBDDsZpEFbF0Bstng
+ZgKsjgCTbIZCOKc2kxRvhsEvAgMBAAGjIzAhMA4GA1UdDwEB/wQEAwICrDAPBgNV
+HRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCWk6sKH8TQdEzNBBM27IGJ
+hP59Pw5LEF/TZyUDLeBLiTDQxepeNtUA2kF1EQaxke4hxls8953NykTMShqjiYNj
+LAIfrC0xT1MtqsECxhmjKLpwRxJgEbnROfp5p0eMz/2plShuOEYoIzaIMLurer/z
+VSFsylzTsjZIc4suAkvdFlWiqnpz6IRzdX46a36G/eq7lrk4fUnGauM86KFJ82u2
+UpgwjVVzBx02plj2KUv3PTW++x1SWgya2vprAPDBJbrrk9OBvxh5ygvpooUrOTVN
+GgobJtFNdZuWKSLReeRtgw4/Jxbc+ska1TcCUHQIykazvd4RQncY8GM4xxv/bdHc
+-----END CERTIFICATE-----
+
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+printf '%s' '-----BEGIN CERTIFICATE-----
+MIIC/jCCAeagAwIBAgIRAIy5433kTqlkYu6FVFHgmAcwDQYJKoZIhvcNAQELBQAw
+DzENMAsGA1UEChMEdXNlcjAeFw0xOTAzMTkxMTA2MDBaFw0yMjAzMDMxMTA2MDBa
+MBMxETAPBgNVBAoTCHVzZXIuZGV2MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEA6XNGJv+Z9fABuyVcZ+RIMloD76y5I7vKuaYQO30uWPVYMsAvMPElK+hZ
+aQBQWdLIhR4DUljTFhg5P/QBp+jEM+XL9hRrb6wu5vu/sCmnV7CIn5YVWcA2bmUz
+2SVstc5KRM9PdX/TccTkvyqYqXWWS++Q6OT1TfQDowG2fXxR2b3aWAYMxuhElWlg
+tk/3Va/hXdkLq4tqrNDY3oOfnE2gIUkEj/GGziOVpV3MoI1by6fpDlcGAaDe7hAu
+0LV7hJK8VZ9yHQMn3p5r2e4QyewRTnGLYH46dCAHZri2B4j8xLPHE+Ao5lJojIE0
+8cHVOGq+k9dUTp9CTALq9Rji5LVDTQIDAQABo1EwTzAOBgNVHQ8BAf8EBAMCA6gw
+EwYDVR0lBAwwCgYIKwYBBQUHAwEwDAYDVR0TAQH/BAIwADAaBgNVHREEEzARggls
+b2NhbGhvc3SHBMCoY2QwDQYJKoZIhvcNAQELBQADggEBADl36mISrNpKDLTVx+RE
+042YvVPzNDUDHRnqmM/5YtvItY7mS7E7cmmwKwSckJnN+YVORL9Qw/K4sL+Ki74J
+wlbvElKeMEOtiAoPwz/kkm5WYeWzu5WNu0uA+fOCY9RnZHxFJ0JPkev6DR6r7D80
+/V/EycZ9yBpDPlE+PKiY6ydGOV8UwWxUFwZFw/F5XqCsKhIT0VOtRVRI6DI8wKS3
+BAgNRhJSeMaKsvPEIcDms+sptRO8PNLmypDahjrzowV3Mrq6o3QyZtJPGatmvZOg
+Xf+p2jwg5TpgXgdh5tsYqvaBjaZJojel9FfNpO9U+Un13urwrjIXWiVYdofzS2at
+b+8=
+-----END CERTIFICATE-----
+' | sudo tee /var/lib/boot2docker/server.pem
+SSH cmd err, output: <nil>: -----BEGIN CERTIFICATE-----
+MIIC/jCCAeagAwIBAgIRAIy5433kTqlkYu6FVFHgmAcwDQYJKoZIhvcNAQELBQAw
+DzENMAsGA1UEChMEdXNlcjAeFw0xOTAzMTkxMTA2MDBaFw0yMjAzMDMxMTA2MDBa
+MBMxETAPBgNVBAoTCHVzZXIuZGV2MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEA6XNGJv+Z9fABuyVcZ+RIMloD76y5I7vKuaYQO30uWPVYMsAvMPElK+hZ
+aQBQWdLIhR4DUljTFhg5P/QBp+jEM+XL9hRrb6wu5vu/sCmnV7CIn5YVWcA2bmUz
+2SVstc5KRM9PdX/TccTkvyqYqXWWS++Q6OT1TfQDowG2fXxR2b3aWAYMxuhElWlg
+tk/3Va/hXdkLq4tqrNDY3oOfnE2gIUkEj/GGziOVpV3MoI1by6fpDlcGAaDe7hAu
+0LV7hJK8VZ9yHQMn3p5r2e4QyewRTnGLYH46dCAHZri2B4j8xLPHE+Ao5lJojIE0
+8cHVOGq+k9dUTp9CTALq9Rji5LVDTQIDAQABo1EwTzAOBgNVHQ8BAf8EBAMCA6gw
+EwYDVR0lBAwwCgYIKwYBBQUHAwEwDAYDVR0TAQH/BAIwADAaBgNVHREEEzARggls
+b2NhbGhvc3SHBMCoY2QwDQYJKoZIhvcNAQELBQADggEBADl36mISrNpKDLTVx+RE
+042YvVPzNDUDHRnqmM/5YtvItY7mS7E7cmmwKwSckJnN+YVORL9Qw/K4sL+Ki74J
+wlbvElKeMEOtiAoPwz/kkm5WYeWzu5WNu0uA+fOCY9RnZHxFJ0JPkev6DR6r7D80
+/V/EycZ9yBpDPlE+PKiY6ydGOV8UwWxUFwZFw/F5XqCsKhIT0VOtRVRI6DI8wKS3
+BAgNRhJSeMaKsvPEIcDms+sptRO8PNLmypDahjrzowV3Mrq6o3QyZtJPGatmvZOg
+Xf+p2jwg5TpgXgdh5tsYqvaBjaZJojel9FfNpO9U+Un13urwrjIXWiVYdofzS2at
+b+8=
+-----END CERTIFICATE-----
+
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+printf '%s' '-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA6XNGJv+Z9fABuyVcZ+RIMloD76y5I7vKuaYQO30uWPVYMsAv
+MPElK+hZaQBQWdLIhR4DUljTFhg5P/QBp+jEM+XL9hRrb6wu5vu/sCmnV7CIn5YV
+WcA2bmUz2SVstc5KRM9PdX/TccTkvyqYqXWWS++Q6OT1TfQDowG2fXxR2b3aWAYM
+xuhElWlgtk/3Va/hXdkLq4tqrNDY3oOfnE2gIUkEj/GGziOVpV3MoI1by6fpDlcG
+AaDe7hAu0LV7hJK8VZ9yHQMn3p5r2e4QyewRTnGLYH46dCAHZri2B4j8xLPHE+Ao
+5lJojIE08cHVOGq+k9dUTp9CTALq9Rji5LVDTQIDAQABAoIBAQDpIwbXIYH3G3YP
+GLOcyVzUdBLkQ2Etb3h4SICDeHNVwccP/9/hB6IwpDzOYNLdsWQxlJSKo0xDD3P1
+C1CwCAQRNBeprCDTCGhaouV/H0oQh6sZfL/bvtpdC1JpNDfJpLeE2mgnFr3qK1Cq
+HPcSnOy47wmPnD/iVqNfIfHGheYUBN6EF7qibzMU/Y+oroJSWxDvLiil9VnjRzD5
+DX/t1fNyKlVyGJsRz7hqtma8SF32Icx+AaezNbBommIMYdFOSTXOi2pPcUr/cCvC
+D8wwoU1N7/WllNEozl3IKHsuumzUtXcatKysI6qfG5ysji9Zg81P6/z4JimGV1GW
+FN33x5pdAoGBAPXHXfUplc38WBz8iIqpGYiC41lUEJjGiusnksBF1tg6+xhR450J
+ltvgF7sVXNHM5sqdHqm4N/AsiL5UbkSe8n8V9BQy6UxfCd8xq5HwFn7FJHLxnUSz
+Q6J1zmBMbDgu0uanOLuG/URnvhWJ4+rSCrD6EGwbVj3/FF3vMRQu1RgXAoGBAPMo
+p4Cv3e56nkX/TuK01cMd01PVPo+TGpW7zAzXl8jVgW8jG7RJ9UYShYCnQ/pbcNuK
+rd2DdkWrxkEub+UIs6TAFsmQ0+pJ4CElfX+mrbIMxYLFeez/QxM/oNJoRgIKoUH9
+o+vNfDyrUp5j2rFmTeCYwkK66fpUCh93ReGhqLo7AoGAY46tpaiBsR3dx2gYGyri
+V+TFGSMvUeNi1FyEWnQv0gkaO0C4lZ0Tyd8dXcAKiEWa20oH6LHhnt07SvXCcPN9
+wTLwWtpAnJoG0q05FXWOdy1+VT0/+lsvM3jK70EluSBmd94W4geNQg9P9UOU2kLY
+59Vzn4b3SUexRVelpspNsWMCgYA7lTuuSens9PjxmAUBgmRbAmT1Ruyki9xY0oLG
+ptGXsdGcpRK10+WZPRKfmt0KbPuzoEDIZd1GZzgWYsWibsZuWW98BtQWtfGIzcH5
+1KL9XSnMyIz+6PHLtqy2wjxdZbNsEzXmoxyNVUHSdA9zpujwXx5C8cBByfQND9H8
+3vsUXwKBgQDCugoE7Ga8J0bwknDtsiMI8cZsOx/iUq6boCZdVa/uNdhENeh7Ve9k
+x25iYRnv6U03IRag/lkbjYzfke/vBFZJIIGx9ASIoTx2ejVYSqESabeeZdWjsFeM
+ALMTTq2dAUu74fHIvh2D2IiDSTu8uBzGsLbdBGQr0u740fUr65jFKg==
+-----END RSA PRIVATE KEY-----
+' | sudo tee /var/lib/boot2docker/server-key.pem
+SSH cmd err, output: <nil>: -----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA6XNGJv+Z9fABuyVcZ+RIMloD76y5I7vKuaYQO30uWPVYMsAv
+MPElK+hZaQBQWdLIhR4DUljTFhg5P/QBp+jEM+XL9hRrb6wu5vu/sCmnV7CIn5YV
+WcA2bmUz2SVstc5KRM9PdX/TccTkvyqYqXWWS++Q6OT1TfQDowG2fXxR2b3aWAYM
+xuhElWlgtk/3Va/hXdkLq4tqrNDY3oOfnE2gIUkEj/GGziOVpV3MoI1by6fpDlcG
+AaDe7hAu0LV7hJK8VZ9yHQMn3p5r2e4QyewRTnGLYH46dCAHZri2B4j8xLPHE+Ao
+5lJojIE08cHVOGq+k9dUTp9CTALq9Rji5LVDTQIDAQABAoIBAQDpIwbXIYH3G3YP
+GLOcyVzUdBLkQ2Etb3h4SICDeHNVwccP/9/hB6IwpDzOYNLdsWQxlJSKo0xDD3P1
+C1CwCAQRNBeprCDTCGhaouV/H0oQh6sZfL/bvtpdC1JpNDfJpLeE2mgnFr3qK1Cq
+HPcSnOy47wmPnD/iVqNfIfHGheYUBN6EF7qibzMU/Y+oroJSWxDvLiil9VnjRzD5
+DX/t1fNyKlVyGJsRz7hqtma8SF32Icx+AaezNbBommIMYdFOSTXOi2pPcUr/cCvC
+D8wwoU1N7/WllNEozl3IKHsuumzUtXcatKysI6qfG5ysji9Zg81P6/z4JimGV1GW
+FN33x5pdAoGBAPXHXfUplc38WBz8iIqpGYiC41lUEJjGiusnksBF1tg6+xhR450J
+ltvgF7sVXNHM5sqdHqm4N/AsiL5UbkSe8n8V9BQy6UxfCd8xq5HwFn7FJHLxnUSz
+Q6J1zmBMbDgu0uanOLuG/URnvhWJ4+rSCrD6EGwbVj3/FF3vMRQu1RgXAoGBAPMo
+p4Cv3e56nkX/TuK01cMd01PVPo+TGpW7zAzXl8jVgW8jG7RJ9UYShYCnQ/pbcNuK
+rd2DdkWrxkEub+UIs6TAFsmQ0+pJ4CElfX+mrbIMxYLFeez/QxM/oNJoRgIKoUH9
+o+vNfDyrUp5j2rFmTeCYwkK66fpUCh93ReGhqLo7AoGAY46tpaiBsR3dx2gYGyri
+V+TFGSMvUeNi1FyEWnQv0gkaO0C4lZ0Tyd8dXcAKiEWa20oH6LHhnt07SvXCcPN9
+wTLwWtpAnJoG0q05FXWOdy1+VT0/+lsvM3jK70EluSBmd94W4geNQg9P9UOU2kLY
+59Vzn4b3SUexRVelpspNsWMCgYA7lTuuSens9PjxmAUBgmRbAmT1Ruyki9xY0oLG
+ptGXsdGcpRK10+WZPRKfmt0KbPuzoEDIZd1GZzgWYsWibsZuWW98BtQWtfGIzcH5
+1KL9XSnMyIz+6PHLtqy2wjxdZbNsEzXmoxyNVUHSdA9zpujwXx5C8cBByfQND9H8
+3vsUXwKBgQDCugoE7Ga8J0bwknDtsiMI8cZsOx/iUq6boCZdVa/uNdhENeh7Ve9k
+x25iYRnv6U03IRag/lkbjYzfke/vBFZJIIGx9ASIoTx2ejVYSqESabeeZdWjsFeM
+ALMTTq2dAUu74fHIvh2D2IiDSTu8uBzGsLbdBGQr0u740fUr65jFKg==
+-----END RSA PRIVATE KEY-----
+
+(dev) Calling .GetURL
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | Host-only MAC: 080027510509
+(dev) DBG |
+(dev) DBG | Using SSH client type: external
+(dev) DBG | &{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+(dev) DBG | About to run SSH command:
+(dev) DBG | ip addr show
+(dev) DBG | SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+(dev) DBG |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+(dev) DBG |     inet 127.0.0.1/8 scope host lo
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 ::1/128 scope host
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:93:cc:ab brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+(dev) Calling .DriverName
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe93:ccab/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:51:05:09 brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 192.168.99.100/24 brd 192.168.99.255 scope global eth1
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe51:509/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+(dev) DBG |     link/sit 0.0.0.0 brd 0.0.0.0
+(dev) DBG |
+(dev) DBG | SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+(dev) DBG |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+(dev) DBG |     inet 127.0.0.1/8 scope host lo
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 ::1/128 scope host
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:93:cc:ab brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe93:ccab/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:51:05:09 brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 192.168.99.100/24 brd 192.168.99.255 scope global eth1
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe51:509/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+(dev) DBG |     link/sit 0.0.0.0 brd 0.0.0.0
+(dev) DBG |
+(dev) DBG | END SSH
+(dev) DBG |
+Setting Docker configuration on the remote daemon...
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+sudo mkdir -p /var/lib/boot2docker && printf %s "
+EXTRA_ARGS='
+--label provider=virtualbox
+
+'
+CACERT=/var/lib/boot2docker/ca.pem
+DOCKER_HOST='-H tcp://0.0.0.0:2376'
+DOCKER_STORAGE=aufs
+DOCKER_TLS=auto
+SERVERKEY=/var/lib/boot2docker/server-key.pem
+SERVERCERT=/var/lib/boot2docker/server.pem
+
+
+" | sudo tee /var/lib/boot2docker/profile
+SSH cmd err, output: <nil>:
+EXTRA_ARGS='
+--label provider=virtualbox
+
+'
+CACERT=/var/lib/boot2docker/ca.pem
+DOCKER_HOST='-H tcp://0.0.0.0:2376'
+DOCKER_STORAGE=aufs
+DOCKER_TLS=auto
+SERVERKEY=/var/lib/boot2docker/server-key.pem
+SERVERCERT=/var/lib/boot2docker/server.pem
+
+
+
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+sudo /etc/init.d/docker start
+SSH cmd err, output: <nil>: warning: 'aufs' is not a supported storage driver for this boot2docker install -- ignoring request!
+ - see https://github.com/boot2docker/boot2docker/issues/1326 for more details
+Starting dockerd
+
+(dev) Calling .GetSSHHostname
+(dev) Calling .GetSSHPort
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHKeyPath
+(dev) Calling .GetSSHUsername
+Using SSH client type: external
+&{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+About to run SSH command:
+if ! type netstat 1>/dev/null; then ss -tln; else netstat -tln; fi
+SSH cmd err, output: <nil>: Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp        0      0 :::2376                 :::*                    LISTEN
+tcp        0      0 :::22                   :::*                    LISTEN
+
+(dev) Calling .GetIP
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | Host-only MAC: 080027510509
+(dev) DBG |
+(dev) DBG | Using SSH client type: external
+(dev) DBG | &{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+(dev) DBG | About to run SSH command:
+(dev) DBG | ip addr show
+(dev) DBG | SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+(dev) DBG |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+(dev) DBG |     inet 127.0.0.1/8 scope host lo
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 ::1/128 scope host
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:93:cc:ab brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe93:ccab/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:51:05:09 brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 192.168.99.100/24 brd 192.168.99.255 scope global eth1
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe51:509/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+(dev) DBG |     link/sit 0.0.0.0 brd 0.0.0.0
+(dev) DBG |
+(dev) DBG | SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+(dev) DBG |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+(dev) DBG |     inet 127.0.0.1/8 scope host lo
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 ::1/128 scope host
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:93:cc:ab brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe93:ccab/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:51:05:09 brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 192.168.99.100/24 brd 192.168.99.255 scope global eth1
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe51:509/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+(dev) DBG |     link/sit 0.0.0.0 brd 0.0.0.0
+(dev) DBG |
+(dev) DBG | END SSH
+(dev) DBG |
+Checking connection to Docker...
+(dev) Calling .GetURL
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo dev --machinereadable
+(dev) DBG | STDOUT:
+(dev) DBG | {
+(dev) DBG | name="dev"
+(dev) DBG | groups="/"
+(dev) DBG | ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+(dev) DBG | UUID="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | CfgFile="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\dev.vbox"
+(dev) DBG | SnapFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Snapshots"
+(dev) DBG | LogFldr="C:\\Users\\user\\.docker\\machine\\machines\\dev\\dev\\Logs"
+(dev) DBG | hardwareuuid="4923f765-9c92-46a0-93da-4fcfe8730c6b"
+(dev) DBG | memory=1024
+(dev) DBG | pagefusion="off"
+(dev) DBG | vram=8
+(dev) DBG | cpuexecutioncap=100
+(dev) DBG | hpet="on"
+(dev) DBG | chipset="piix3"
+(dev) DBG | firmware="BIOS"
+(dev) DBG | cpus=1
+(dev) DBG | pae="on"
+(dev) DBG | longmode="on"
+(dev) DBG | triplefaultreset="off"
+(dev) DBG | apic="on"
+(dev) DBG | x2apic="off"
+(dev) DBG | cpuid-portability-level=0
+(dev) DBG | bootmenu="disabled"
+(dev) DBG | boot1="dvd"
+(dev) DBG | boot2="dvd"
+(dev) DBG | boot3="disk"
+(dev) DBG | boot4="none"
+(dev) DBG | acpi="on"
+(dev) DBG | ioapic="on"
+(dev) DBG | biosapic="apic"
+(dev) DBG | biossystemtimeoffset=0
+(dev) DBG | rtcuseutc="on"
+(dev) DBG | hwvirtex="on"
+(dev) DBG | nestedpaging="on"
+(dev) DBG | largepages="on"
+(dev) DBG | vtxvpid="on"
+(dev) DBG | vtxux="on"
+(dev) DBG | paravirtprovider="default"
+(dev) DBG | effparavirtprovider="kvm"
+(dev) DBG | VMState="running"
+(dev) DBG | VMStateChangeTime="2019-03-19T11:10:30.862000000"
+(dev) DBG | monitorcount=1
+(dev) DBG | accelerate3d="off"
+(dev) DBG | accelerate2dvideo="off"
+(dev) DBG | teleporterenabled="off"
+(dev) DBG | teleporterport=0
+(dev) DBG | teleporteraddress=""
+(dev) DBG | teleporterpassword=""
+(dev) DBG | tracing-enabled="off"
+(dev) DBG | tracing-allow-vm-access="off"
+(dev) DBG | tracing-config=""
+(dev) DBG | autostart-enabled="off"
+(dev) DBG | autostart-delay=0
+(dev) DBG | defaultfrontend=""
+(dev) DBG | storagecontrollername0="SATA"
+(dev) DBG | storagecontrollertype0="IntelAhci"
+(dev) DBG | storagecontrollerinstance0="0"
+(dev) DBG | storagecontrollermaxportcount0="30"
+(dev) DBG | storagecontrollerportcount0="30"
+(dev) DBG | storagecontrollerbootable0="on"
+(dev) DBG | "SATA-0-0"="C:\Users\user\.docker\machine\machines\dev\boot2docker.iso"
+(dev) DBG | "SATA-ImageUUID-0-0"="f632c0ec-5481-4eea-9425-a7e65c182903"
+(dev) DBG | "SATA-tempeject"="off"
+(dev) DBG | "SATA-IsEjected"="off"
+(dev) DBG | "SATA-1-0"="C:\Users\user\.docker\machine\machines\dev\disk.vmdk"
+(dev) DBG | "SATA-ImageUUID-1-0"="257d3c2a-2db3-453c-9118-0058174733cf"
+(dev) DBG | "SATA-2-0"="none"
+(dev) DBG | "SATA-3-0"="none"
+(dev) DBG | "SATA-4-0"="none"
+(dev) DBG | "SATA-5-0"="none"
+(dev) DBG | "SATA-6-0"="none"
+(dev) DBG | "SATA-7-0"="none"
+(dev) DBG | "SATA-8-0"="none"
+(dev) DBG | "SATA-9-0"="none"
+(dev) DBG | "SATA-10-0"="none"
+(dev) DBG | "SATA-11-0"="none"
+(dev) DBG | "SATA-12-0"="none"
+(dev) DBG | "SATA-13-0"="none"
+(dev) DBG | "SATA-14-0"="none"
+(dev) DBG | "SATA-15-0"="none"
+(dev) DBG | "SATA-16-0"="none"
+(dev) DBG | "SATA-17-0"="none"
+(dev) DBG | "SATA-18-0"="none"
+(dev) DBG | "SATA-19-0"="none"
+(dev) DBG | "SATA-20-0"="none"
+(dev) DBG | "SATA-21-0"="none"
+(dev) DBG | "SATA-22-0"="none"
+(dev) DBG | "SATA-23-0"="none"
+(dev) DBG | "SATA-24-0"="none"
+(dev) DBG | "SATA-25-0"="none"
+(dev) DBG | "SATA-26-0"="none"
+(dev) DBG | "SATA-27-0"="none"
+(dev) DBG | "SATA-28-0"="none"
+(dev) DBG | "SATA-29-0"="none"
+(dev) DBG | natnet1="nat"
+(dev) DBG | macaddress1="08002793CCAB"
+(dev) DBG | cableconnected1="on"
+(dev) DBG | nic1="nat"
+(dev) DBG | nictype1="82540EM"
+(dev) DBG | nicspeed1="0"
+(dev) DBG | mtu="0"
+(dev) DBG | sockSnd="64"
+(dev) DBG | sockRcv="64"
+(dev) DBG | tcpWndSnd="64"
+(dev) DBG | tcpWndRcv="64"
+(dev) DBG | Forwarding(0)="ssh,tcp,127.0.0.1,51362,,22"
+(dev) DBG | hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #3"
+(dev) DBG | macaddress2="080027510509"
+(dev) DBG | cableconnected2="on"
+(dev) DBG | nic2="hostonly"
+(dev) DBG | nictype2="82540EM"
+(dev) DBG | nicspeed2="0"
+(dev) DBG | nic3="none"
+(dev) DBG | nic4="none"
+(dev) DBG | nic5="none"
+(dev) DBG | nic6="none"
+(dev) DBG | nic7="none"
+(dev) DBG | nic8="none"
+(dev) DBG | hidpointing="ps2mouse"
+(dev) DBG | hidkeyboard="ps2kbd"
+(dev) DBG | uart1="off"
+(dev) DBG | uart2="off"
+(dev) DBG | uart3="off"
+(dev) DBG | uart4="off"
+(dev) DBG | lpt1="off"
+(dev) DBG | lpt2="off"
+(dev) DBG | audio="dsound"
+(dev) DBG | audio_in="false"
+(dev) DBG | audio_out="false"
+(dev) DBG | clipboard="disabled"
+(dev) DBG | draganddrop="disabled"
+(dev) DBG | SessionName="headless"
+(dev) DBG | VideoMode="720,400,0"@0,0 1
+(dev) DBG | vrde="off"
+(dev) DBG | usb="off"
+(dev) DBG | ehci="off"
+(dev) DBG | xhci="off"
+(dev) DBG | SharedFolderNameMachineMapping1="c/Users"
+(dev) DBG | SharedFolderPathMachineMapping1="\\?\c:\Users"
+(dev) DBG | VRDEActiveConnection="off"
+(dev) DBG | VRDEClients=0
+(dev) DBG | videocap="off"
+(dev) DBG | videocap_audio="off"
+(dev) DBG | videocapscreens=0
+(dev) DBG | videocapfile="C:\Users\user\.docker\machine\machines\dev\dev\dev.webm"
+(dev) DBG | videocapres=1024x768
+(dev) DBG | videocaprate=512
+(dev) DBG | videocapfps=25
+(dev) DBG | videocapopts=
+(dev) DBG | GuestMemoryBalloon=0
+(dev) DBG | GuestOSType="Linux26_64"
+(dev) DBG | GuestAdditionsRunLevel=2
+(dev) DBG | GuestAdditionsVersion="5.2.26 r128414"
+(dev) DBG | GuestAdditionsFacility_VirtualBox Base Driver=50,1552993858146
+(dev) DBG | GuestAdditionsFacility_VirtualBox System Service=50,1552993874081
+(dev) DBG | GuestAdditionsFacility_Seamless Mode=0,1552993858146
+(dev) DBG | GuestAdditionsFacility_Graphics Mode=0,1552993858146
+(dev) DBG | }
+(dev) DBG | STDERR:
+(dev) DBG | {
+(dev) DBG | }
+(dev) DBG | Host-only MAC: 080027510509
+(dev) DBG |
+(dev) DBG | Using SSH client type: external
+(dev) DBG | &{[-F /dev/null -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o ConnectionAttempts=3 -o ConnectTimeout=10 -o ControlMaster=no -o ControlPath=none docker@127.0.0.1 -o IdentitiesOnly=yes -i C:\Users\user\.docker\machine\machines\dev\id_rsa -p 51362] D:\Git\usr\bin\ssh.exe <nil>}
+(dev) DBG | About to run SSH command:
+(dev) DBG | ip addr show
+(dev) DBG | SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+(dev) DBG |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+(dev) DBG |     inet 127.0.0.1/8 scope host lo
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 ::1/128 scope host
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:93:cc:ab brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe93:ccab/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:51:05:09 brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 192.168.99.100/24 brd 192.168.99.255 scope global eth1
+(dev) DBG |        valid_lft forever preferred_lft forever
+Reading CA certificate from C:\Users\user\.docker\machine\certs\ca.pem
+(dev) DBG |     inet6 fe80::a00:27ff:fe51:509/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+(dev) DBG |     link/sit 0.0.0.0 brd 0.0.0.0
+(dev) DBG | 6: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+(dev) DBG |     link/ether 02:42:64:ae:99:fc brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |
+(dev) DBG | SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+(dev) DBG |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+(dev) DBG |     inet 127.0.0.1/8 scope host lo
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 ::1/128 scope host
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:93:cc:ab brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe93:ccab/64 scope link
+Reading client certificate from C:\Users\user\.docker\machine\certs\cert.pem
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+(dev) DBG |     link/ether 08:00:27:51:05:09 brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 192.168.99.100/24 brd 192.168.99.255 scope global eth1
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |     inet6 fe80::a00:27ff:fe51:509/64 scope link
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG | 4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+(dev) DBG |     link/sit 0.0.0.0 brd 0.0.0.0
+(dev) DBG | 6: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+(dev) DBG |     link/ether 02:42:64:ae:99:fc brd ff:ff:ff:ff:ff:ff
+(dev) DBG |     inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+(dev) DBG |        valid_lft forever preferred_lft forever
+(dev) DBG |
+(dev) DBG | END SSH
+(dev) DBG |
+Reading client key from C:\Users\user\.docker\machine\certs\key.pem
+Docker is up and running!
+Reticulating splines...
+(dev) Calling .GetConfigRaw
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\Program Files\Docker Toolbox\docker-machine.exe env dev
+Making call to close driver server
+(dev) Calling .Close
+Successfully made call to close driver server
+Making call to close connection to plugin binary
+(dev) DBG | Closing plugin on server side
+Making call to close driver server
+(flag-lookup) Calling .Close
+Successfully made call to close driver server
+Making call to close connection to plugin binary
+
+user@Rajamanoheryogi MINGW64 /c/Program Files/Docker Toolbox
+$ ^C
+
+user@Rajamanoheryogi MINGW64 /c/Program Files/Docker Toolbox
+$
