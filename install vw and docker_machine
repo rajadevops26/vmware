@@ -1,0 +1,15 @@
+https://www.virtualbox.org/wiki/Downloads
+***********************
+open git bash in windows download docker-machine
+******************************************************
+base=https://github.com/docker/machine/releases/download/v0.16.0 &&
+  mkdir -p "$HOME/bin" &&
+  curl -L $base/docker-machine-Windows-x86_64.exe > "$HOME/bin/docker-machine.exe" &&
+  chmod +x "$HOME/bin/docker-machine.exe"
+  enter
+  cd /c/Users/Rajamanoheryogi/bin
+  ls
+  docker-machine.exe*
+  start docker-machine.exe*
+  docker-machine version
+  docker-machine.exe -D create --driver virtualbox raja
