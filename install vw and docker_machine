@@ -1,5 +1,60 @@
 https://www.virtualbox.org/wiki/Downloads
 ***********************
+download toolbox and run start.sh script on gitbash don't install kibana(install engine,machine,vertual machine on it. it shows to you when 
+you install toolbox
+****************************
+link for toolbox
+https://mega.nz/#!qyoUAYiR!kwaS6GWRmzUx9MdLmQXz7GdU-JmlW5gEAVt_DJo_WtI
+
+then open gitbash run below commands(https://docs.docker.com/machine/reference/create/)
+***************************************
+mkdir -p ~/.docker/machine && touch ~/.docker/machine/no-error-report
+docker-machine ls
+
+docker-machine create -d virtualbox \
+    --engine-label foo=bar \
+    --engine-label spam=eggs \
+    --engine-storage-driver overlay \
+    --engine-insecure-registry registry.myco.com \
+    foobarmachine
+eval $(docker-machine env foobarmachine)
+docker info
+
+docker-machine create -d virtualbox \
+    --engine-opt dns=8.8.8.8 \
+    --engine-opt log-driver=syslog \
+    gdns
+    
+    
+docker-machine create -d virtualbox \
+    --engine-env HTTP_PROXY=http://example.com:8080 \
+    --engine-env HTTPS_PROXY=https://example.com:8080 \
+    --engine-env NO_PROXY=example2.com \
+    proxbox
+ 
+ 
+ docker-machine create -d virtualbox \
+    --swarm \
+    --swarm-master \
+    --swarm-discovery token://<token> \
+    --swarm-strategy binpack \
+    --swarm-opt heartbeat=5s \
+    upbeat
+
+docker-machine create --driver virtualbox default
+docker-machine env default
+eval "$(docker-machine env default)"
+docker-machine ssh dev
+docker-machine ssh dev free
+docker-machine ssh dev df -h
+docker-machine ssh default -L 8080:localhost:8080
+docker-machine --native-ssh ssh dev
+
+
+
+
+
+
 open git bash in windows download docker-machine
 ******************************************************
 base=https://github.com/docker/machine/releases/download/v0.16.0 &&
