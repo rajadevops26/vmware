@@ -1,0 +1,298 @@
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ vagrant status
+vagrant Current machine states:
+
+kmaster                   running (virtualbox)
+kworker1                  saved (virtualbox)
+kworker2                  saved (virtualbox)
+
+This environment represents multiple VMs. The VMs are all listed
+above with their current state. For more information about a specific
+VM, run `vagrant status NAME`.
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ vagrant ssh kmaster
+Last login: Wed May 29 12:24:48 2019 from 10.0.2.2
+[vagrant@kmaster ~]$ kubectl get nodes
+NAME                   STATUS     ROLES    AGE   VERSION
+kmaster.example.com    Ready      master   48m   v1.14.2
+kworker1.example.com   NotReady   <none>   42m   v1.14.2
+kworker2.example.com   NotReady   <none>   30m   v1.14.2
+[vagrant@kmaster ~]$ kubectl cluster-info
+Kubernetes master is running at https://172.42.42.100:6443
+KubeDNS is running at https://172.42.42.100:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+[vagrant@kmaster ~]$ kubectl version --short
+Client Version: v1.14.2
+Server Version: v1.14.2
+[vagrant@kmaster ~]$ kubectl get nodes -o wide
+NAME                   STATUS     ROLES    AGE   VERSION   INTERNAL-IP     EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION              CONTAINER-RUNTIME
+kmaster.example.com    Ready      master   49m   v1.14.2   172.42.42.100   <none>        CentOS Linux 7 (Core)   3.10.0-957.5.1.el7.x86_64   docker://18.9.6
+kworker1.example.com   NotReady   <none>   43m   v1.14.2   172.42.42.101   <none>        CentOS Linux 7 (Core)   3.10.0-957.5.1.el7.x86_64   docker://18.9.6
+kworker2.example.com   NotReady   <none>   32m   v1.14.2   172.42.42.102   <none>        CentOS Linux 7 (Core)   3.10.0-957.5.1.el7.x86_64   docker://18.9.6
+[vagrant@kmaster ~]$ logout
+Connection to 127.0.0.1 closed.
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ vi /etc/hosts
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ cat /etc/hosts
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#       127.0.0.1       localhost
+#       ::1             localhost
+
+# unchecky_begin
+# These rules were added by the Unchecky program in order to block advertising software modules
+0.0.0.0 0.0.0.0 # fix for traceroute and netstat display anomaly
+0.0.0.0 tracking.opencandy.com.s3.amazonaws.com
+0.0.0.0 media.opencandy.com
+0.0.0.0 cdn.opencandy.com
+0.0.0.0 tracking.opencandy.com
+0.0.0.0 api.opencandy.com
+0.0.0.0 api.recommendedsw.com
+0.0.0.0 rp.yefeneri2.com
+0.0.0.0 os.yefeneri2.com
+0.0.0.0 os2.yefeneri2.com
+0.0.0.0 installer.betterinstaller.com
+0.0.0.0 installer.filebulldog.com
+0.0.0.0 d3oxtn1x3b8d7i.cloudfront.net
+0.0.0.0 inno.bisrv.com
+0.0.0.0 nsis.bisrv.com
+0.0.0.0 cdn.file2desktop.com
+0.0.0.0 cdn.goateastcach.us
+0.0.0.0 cdn.guttastatdk.us
+0.0.0.0 cdn.inskinmedia.com
+0.0.0.0 cdn.insta.oibundles2.com
+0.0.0.0 cdn.insta.playbryte.com
+0.0.0.0 cdn.llogetfastcach.us
+0.0.0.0 cdn.montiera.com
+0.0.0.0 cdn.msdwnld.com
+0.0.0.0 cdn.mypcbackup.com
+0.0.0.0 cdn.ppdownload.com
+0.0.0.0 cdn.riceateastcach.us
+0.0.0.0 cdn.shyapotato.us
+0.0.0.0 cdn.solimba.com
+0.0.0.0 cdn.tuto4pc.com
+0.0.0.0 cdn.appround.biz
+0.0.0.0 cdn.bigspeedpro.com
+0.0.0.0 cdn.bispd.com
+0.0.0.0 cdn.bisrv.com
+0.0.0.0 cdn.cdndp.com
+0.0.0.0 cdn.download.sweetpacks.com
+0.0.0.0 cdn.dpdownload.com
+0.0.0.0 cdn.visualbee.net
+172.42.42.100 kmaster.example.com kmaster
+172.42.42.101 kworker1.example.com kworker1
+172.42.42.102 kworker2.example.com kworker2
+# unchecky_end
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ whoami
+Rajamanoheryogi
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ cd
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~
+$ mkdir .kube
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~
+$ scp vagrant@kmaster.example.com:.kube/config .kube/
+ssh: Could not resolve hostname kmaster.example.com: Name or service not known
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~
+$ scp vagrant@kmaster.example.com:.kube/config .kube
+ssh: Could not resolve hostname kmaster.example.com: Name or service not known
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~
+$ scp vagrant@kmaster.example.com: .kube/config .kube
+ssh: Could not resolve hostname kmaster.example.com: Name or service not known
+cp: cannot stat '.kube/config': No such file or directory
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~
+$ scp vagrant@172.42.42.100:.kube/config .kube
+The authenticity of host '172.42.42.100 (172.42.42.100)' can't be established.
+ECDSA key fingerprint is SHA256:8O+HT04wR/T0pYzCKk4jcECye3+RhYO4RjBDCBpoC6I.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '172.42.42.100' (ECDSA) to the list of known hosts.
+vagrant@172.42.42.100's password:
+config                                                                                                                                               100% 5449   395.3KB/s   00:00
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~
+$ which kubectl
+which: no kubectl in (/c/Users/Rajamanoheryogi/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/Rajamanoheryogi/bin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/cmd:/c/HashiCorp/Vagrant/bin:/c/Users/Rajamanoheryogi/AppData/Local/Microsoft/WindowsApps:/c/Program Files/Docker Toolbox:/usr/bin/vendor_perl:/usr/bin/core_perl)
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~
+$ vagrant ssh kmaster
+A Vagrant environment or target machine is required to run this
+command. Run `vagrant init` to create a new Vagrant environment. Or,
+get an ID of a target machine from `vagrant global-status` to run
+this command on. A final option is to change to a directory with a
+Vagrantfile and to try again.
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~
+$ kubectl cluster-info
+bash: kubectl: command not found
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~
+$ ls -a
+ ./                     .viminfo             Downloads/              NTUSER.DAT                                                                                     PrintHood@
+ ../                    .VirtualBox/         Favorites/              ntuser.dat.LOG1                                                                                Recent@
+ .bash_history         '3D Objects'/         k8s/                    ntuser.dat.LOG2                                                                               'Saved Games'/
+ .BitLord/              AppData/             Links/                  NTUSER.DAT{47a6a17a-a514-11e7-a94e-ec0d9a05c860}.TM.blf                                        Searches/
+ .docker/              'Application Data'@  'Local Settings'@        NTUSER.DAT{47a6a17a-a514-11e7-a94e-ec0d9a05c860}.TMContainer00000000000000000001.regtrans-ms   SendTo@
+ .kube/                 Contacts/            MicrosoftEdgeBackups/   NTUSER.DAT{47a6a17a-a514-11e7-a94e-ec0d9a05c860}.TMContainer00000000000000000002.regtrans-ms  'Start Menu'@
+ .QtWebEngineProcess/   Cookies@             Music/                  ntuser.ini                                                                                     Templates@
+ .ssh/                  Desktop/            'My Documents'@          OneDrive/                                                                                      Videos/
+ .vagrant.d/            Documents/           NetHood@                Pictures/                                                                                     'VirtualBox VMs'/
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~
+$ cd k8s/
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s
+$ which kubectl
+which: no kubectl in (/c/Users/Rajamanoheryogi/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/Rajamanoheryogi/bin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/cmd:/c/HashiCorp/Vagrant/bin:/c/Users/Rajamanoheryogi/AppData/Local/Microsoft/WindowsApps:/c/Program Files/Docker Toolbox:/usr/bin/vendor_perl:/usr/bin/core_perl)
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s
+$ kubectl cluster-info
+bash: kubectl: command not found
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s
+$ cd kubernetes/
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes (master)
+$ VBoxManage list vms
+bash: VBoxManage: command not found
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes (master)
+$ VBoxManage list
+bash: VBoxManage: command not found
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes (master)
+$ VBoxManage startvm kmaster
+bash: VBoxManage: command not found
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes (master)
+$ vagrant halt kmaster
+A Vagrant environment or target machine is required to run this
+command. Run `vagrant init` to create a new Vagrant environment. Or,
+get an ID of a target machine from `vagrant global-status` to run
+this command on. A final option is to change to a directory with a
+Vagrantfile and to try again.
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes (master)
+$ cd vagrant-provisioning/
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ VBoxManage list
+bash: VBoxManage: command not found
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ VBoxManage startvm kmaster
+bash: VBoxManage: command not found
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ vagrant halt kmaster
+==> kmaster: Attempting graceful shutdown of VM...
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ vagrant ssh kmaster
+VM must be running to open SSH connection. Run `vagrant up`
+to start the virtual machine.
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ vagrant up
+Bringing machine 'kmaster' up with 'virtualbox' provider...
+Bringing machine 'kworker1' up with 'virtualbox' provider...
+Bringing machine 'kworker2' up with 'virtualbox' provider...
+==> kmaster: Checking if box 'centos/7' version '1902.01' is up to date...
+==> kmaster: Clearing any previously set forwarded ports...
+==> kmaster: Clearing any previously set network interfaces...
+==> kmaster: Preparing network interfaces based on configuration...
+    kmaster: Adapter 1: nat
+    kmaster: Adapter 2: hostonly
+==> kmaster: Forwarding ports...
+    kmaster: 22 (guest) => 2222 (host) (adapter 1)
+==> kmaster: Running 'pre-boot' VM customizations...
+==> kmaster: Booting VM...
+==> kmaster: Waiting for machine to boot. This may take a few minutes...
+    kmaster: SSH address: 127.0.0.1:2222
+    kmaster: SSH username: vagrant
+    kmaster: SSH auth method: private key
+==> kmaster: Machine booted and ready!
+==> kmaster: Checking for guest additions in VM...
+    kmaster: No guest additions were detected on the base box for this VM! Guest
+    kmaster: additions are required for forwarded ports, shared folders, host only
+    kmaster: networking, and more. If SSH fails on this machine, please install
+    kmaster: the guest additions and repackage the box to continue.
+    kmaster:
+    kmaster: This is not an error message; everything may continue to work properly,
+    kmaster: in which case you may ignore this message.
+==> kmaster: Setting hostname...
+==> kmaster: Configuring and enabling network interfaces...
+==> kmaster: Rsyncing folder: /cygdrive/c/Users/Rajamanoheryogi/k8s/kubernetes/vagrant-provisioning/ => /vagrant
+==> kmaster: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> kmaster: flag to force provisioning. Provisioners marked to run always will still run.
+==> kworker1: Checking if box 'centos/7' version '1902.01' is up to date...
+==> kworker1: Resuming suspended VM...
+==> kworker1: Booting VM...
+==> kworker1: Waiting for machine to boot. This may take a few minutes...
+    kworker1: SSH address: 127.0.0.1:2200
+    kworker1: SSH username: vagrant
+    kworker1: SSH auth method: private key
+==> kworker1: Machine booted and ready!
+==> kworker1: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> kworker1: flag to force provisioning. Provisioners marked to run always will still run.
+==> kworker2: Checking if box 'centos/7' version '1902.01' is up to date...
+Vagrant cannot forward the specified ports on this VM, since they
+would collide with some other application that is already listening
+on these ports. The forwarded port to 2200 is already in use
+on the host machine.
+
+To fix this, modify your current project's Vagrantfile to use another
+port. Example, where '1234' would be replaced by a unique host port:
+
+  config.vm.network :forwarded_port, guest: 22, host: 1234
+
+Sometimes, Vagrant will attempt to auto-correct this for you. In this
+case, Vagrant was unable to. This is usually because the guest machine
+is in a state which doesn't allow modifying port forwarding. You could
+try 'vagrant reload' (equivalent of running a halt followed by an up)
+so vagrant can attempt to auto-correct this upon booting. Be warned
+that any unsaved work might be lost.
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ vagrant status
+Current machine states:
+
+kmaster                   running (virtualbox)
+kworker1                  running (virtualbox)
+kworker2                  saved (virtualbox)
+
+This environment represents multiple VMs. The VMs are all listed
+above with their current state. For more information about a specific
+VM, run `vagrant status NAME`.
+
+Rajamanoheryogi@DESKTOP-K988EAN MINGW64 ~/k8s/kubernetes/vagrant-provisioning (master)
+$ vagrant up
