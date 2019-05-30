@@ -1,0 +1,143 @@
+vagrant@172.42.42.100's password:
+     ┌────────────────────────────────────────────────────────────────────┐
+     │                        • MobaXterm 11.1 •                          │
+     │            (SSH client, X-server and networking tools)             │
+     │                                                                    │
+     │ ➤ SSH session to vagrant@172.42.42.100                             │
+     │   • SSH compression : ✔                                            │
+     │   • SSH-browser     : ✔                                            │
+     │   • X11-forwarding  : ✘  (disabled or not supported by server)     │
+     │   • DISPLAY         : 192.168.1.2:0.0                              │
+     │                                                                    │
+     │ ➤ For more info, ctrl+click on help or visit our website           │
+     └────────────────────────────────────────────────────────────────────┘
+
+Last login: Thu May 30 23:29:06 2019
+[vagrant@kmaster ~]$ wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat-stable/jenkins.repo
+-bash: wget: command not found
+[vagrant@kmaster ~]$ sudo -i
+[root@kmaster ~]# yum install wget
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.excellmedia.net
+ * extras: mirrors.123host.vn
+ * updates: centos.excellmedia.net
+Resolving Dependencies
+--> Running transaction check
+---> Package wget.x86_64 0:1.14-18.el7_6.1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==================================================================================================================================
+ Package                   Arch                        Version                                 Repository                    Size
+==================================================================================================================================
+Installing:
+ wget                      x86_64                      1.14-18.el7_6.1                         updates                      547 k
+
+Transaction Summary
+==================================================================================================================================
+Install  1 Package
+
+Total download size: 547 k
+Installed size: 2.0 M
+Is this ok [y/d/N]: y
+Downloading packages:
+wget-1.14-18.el7_6.1.x86_64.rpm                                                                            | 547 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : wget-1.14-18.el7_6.1.x86_64                                                                                    1/1
+  Verifying  : wget-1.14-18.el7_6.1.x86_64                                                                                    1/1
+
+Installed:
+  wget.x86_64 0:1.14-18.el7_6.1
+
+Complete!
+[root@kmaster ~]# wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat-stable/jenkins.repo
+--2019-05-30 23:41:33--  http://pkg.jenkins.io/redhat-stable/jenkins.repo
+Resolving pkg.jenkins.io (pkg.jenkins.io)... 52.202.51.185
+Connecting to pkg.jenkins.io (pkg.jenkins.io)|52.202.51.185|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 85
+Saving to: ‘/etc/yum.repos.d/jenkins.repo’
+
+100%[========================================================================================>] 85          --.-K/s   in 0s
+
+2019-05-30 23:41:35 (2.02 MB/s) - ‘/etc/yum.repos.d/jenkins.repo’ saved [85/85]
+
+[root@kmaster ~]# rpm --import http://pkg.jenkins.io/redhat-stable/jenkins.io.key
+[root@kmaster ~]# ls
+anaconda-ks.cfg  kubeinit.log  original-ks.cfg
+[root@kmaster ~]# yum install jenkins
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: ftp.iitm.ac.in
+ * extras: centos.excellmedia.net
+ * updates: centos.excellmedia.net
+jenkins                                                                                                    | 2.9 kB  00:00:00
+jenkins/primary_db                                                                                         |  28 kB  00:00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package jenkins.noarch 0:2.164.3-1.1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==================================================================================================================================
+ Package                       Arch                         Version                           Repository                     Size
+==================================================================================================================================
+Installing:
+ jenkins                       noarch                       2.164.3-1.1                       jenkins                        74 M
+
+Transaction Summary
+==================================================================================================================================
+Install  1 Package
+
+Total download size: 74 M
+Installed size: 74 M
+Is this ok [y/d/N]: y
+Downloading packages:
+jenkins-2.164.3-1.1.noarch.rpm                                                                             |  74 MB  00:00:36
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : jenkins-2.164.3-1.1.noarch                                                                                     1/1
+  Verifying  : jenkins-2.164.3-1.1.noarch                                                                                     1/1
+
+Installed:
+  jenkins.noarch 0:2.164.3-1.1
+
+Complete!
+[root@kmaster ~]# systemctl start jenkins
+[root@kmaster ~]# systemctl enable jenkins
+jenkins.service is not a native service, redirecting to /sbin/chkconfig.
+Executing /sbin/chkconfig jenkins on
+[root@kmaster ~]#
+**************************************
+yum install java-1.8.0
+*************************************
+if not open in browser
+
+
+https://www.linuxtechi.com/install-configure-jenkins-on-centos-7-rhel-7/
+
+
+[root@jenkins ~]# firewall-cmd --zone=public --add-port=8080/tcp --permanent
+success
+[root@jenkins ~]# firewall-cmd --zone=public --add-service=http --permanent
+success
+[root@jenkins ~]# firewall-cmd --reload
+success
+[root@jenkins ~]#
+[root@jenkins ~]# grep -A 5 password /var/log/jenkins/jenkins.log
+******************************************************************
+path setting for java
+
+update-alternatives --config java
+vim .bash_profile
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin/java
+Source .bash_profile
+echo $JAVA_HOME
