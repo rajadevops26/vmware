@@ -1,0 +1,164 @@
+[vagrant@kmaster manifests]$ ls
+etcd.yaml  kube-apiserver.yaml  kube-controller-manager.yaml  kube-scheduler.yaml  raja.yml  service.yml
+[vagrant@kmaster manifests]$ cd
+[vagrant@kmaster ~]$ ls
+service.yml
+[vagrant@kmaster ~]$ rm -rf service.yml
+[vagrant@kmaster ~]$ ls
+[vagrant@kmaster ~]$ clear
+[vagrant@kmaster ~]$ kubectl get svc --all-namespaces
+NAMESPACE     NAME                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                  AGE
+default       kubernetes             ClusterIP   10.96.0.1        <none>        443/TCP                  11h
+default       nginx                  NodePort    10.110.239.235   <none>        80:31389/TCP             36m
+kube-system   kube-dns               ClusterIP   10.96.0.10       <none>        53/UDP,53/TCP,9153/TCP   11h
+kube-system   kubernetes-dashboard   NodePort    10.110.46.136    <none>        443:32560/TCP            47m
+[vagrant@kmaster ~]$ yum install curl
+Loaded plugins: fastestmirror
+You need to be root to perform this command.
+[vagrant@kmaster ~]$ sudo -i
+[root@kmaster ~]# yum install curl
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.excellmedia.net
+ * extras: centos.excellmedia.net
+ * updates: centos.excellmedia.net
+Package curl-7.29.0-51.el7.x86_64 already installed and latest version
+Nothing to do
+[root@kmaster ~]# curl localhost:32560
+
+
+^C
+[root@kmaster ~]# kubectl get pods --namespace=kube-system
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+[root@kmaster ~]# exit
+logout
+[vagrant@kmaster ~]$ kubectl get pods --namespace=kube-system
+NAME                                          READY   STATUS    RESTARTS   AGE
+coredns-fb8b8dccf-nq8ht                       1/1     Running   1          11h
+coredns-fb8b8dccf-pks5m                       1/1     Running   1          11h
+etcd-kmaster.example.com                      1/1     Running   2          11h
+kube-apiserver-kmaster.example.com            1/1     Running   2          11h
+kube-controller-manager-kmaster.example.com   1/1     Running   3          11h
+kube-flannel-ds-amd64-9gmc5                   1/1     Running   0          11h
+kube-flannel-ds-amd64-m952q                   1/1     Running   0          11h
+kube-flannel-ds-amd64-mq4nm                   1/1     Running   1          11h
+kube-proxy-dcqk2                              1/1     Running   0          11h
+kube-proxy-gbw7x                              1/1     Running   0          11h
+kube-proxy-n6tcv                              1/1     Running   1          11h
+kube-scheduler-kmaster.example.com            1/1     Running   3          11h
+kubernetes-dashboard-5f7b999d65-knz7b         1/1     Running   0          52m
+weave-net-7f49q                               2/2     Running   0          56m
+weave-net-flrr4                               0/2     Pending   0          56m
+weave-net-xlrh2                               0/2     Pending   0          56m
+[vagrant@kmaster ~]$ kubectl get pods --namespace=kube-system
+NAME                                          READY   STATUS    RESTARTS   AGE
+coredns-fb8b8dccf-nq8ht                       1/1     Running   1          12h
+coredns-fb8b8dccf-pks5m                       1/1     Running   1          12h
+etcd-kmaster.example.com                      1/1     Running   2          12h
+kube-apiserver-kmaster.example.com            1/1     Running   2          12h
+kube-controller-manager-kmaster.example.com   1/1     Running   3          12h
+kube-flannel-ds-amd64-9gmc5                   1/1     Running   0          11h
+kube-flannel-ds-amd64-m952q                   1/1     Running   0          11h
+kube-flannel-ds-amd64-mq4nm                   1/1     Running   1          12h
+kube-proxy-dcqk2                              1/1     Running   0          11h
+kube-proxy-gbw7x                              1/1     Running   0          11h
+kube-proxy-n6tcv                              1/1     Running   1          12h
+kube-scheduler-kmaster.example.com            1/1     Running   3          12h
+kubernetes-dashboard-5f7b999d65-knz7b         1/1     Running   0          55m
+weave-net-7f49q                               2/2     Running   0          60m
+weave-net-flrr4                               0/2     Pending   0          60m
+weave-net-xlrh2                               0/2     Pending   0          60m
+[vagrant@kmaster ~]$ https://172.42.42.100:32560/#!/login
+-bash: !/login: event not found
+[vagrant@kmaster ~]$ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep rajendra-admin | awk '{print $1}')
+Name:         rajendra-admin-token-trm8v
+Namespace:    kube-system
+Labels:       <none>
+Annotations:  kubernetes.io/service-account.name: rajendra-admin
+              kubernetes.io/service-account.uid: f7b69500-8266-11e9-9abf-525400261060
+
+Type:  kubernetes.io/service-account-token
+
+Data
+====
+ca.crt:     1025 bytes
+namespace:  11 bytes
+token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlLXN5c3RlbSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJyYWplbmRyYS1hZG1pbi10b2tlbi10cm04diIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJyYWplbmRyYS1hZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6ImY3YjY5NTAwLTgyNjYtMTFlOS05YWJmLTUyNTQwMDI2MTA2MCIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlLXN5c3RlbTpyYWplbmRyYS1hZG1pbiJ9.jgN6NesXcXzGVJ-XPXzrSZBTyPlUvfnGzdtq_YsahXjKGoue-eQacu5_8QqwTVnsTwA_ai5OQF85n4NhmCsk-a3rJHF2bFX-BeEyB6jUnGN3VjbY_IIebn1zOpculiYu1-f8Idq-H_HPz6XEX59-1Rkbt_HLaEdCtpyKfI45OP1lijf9X93kZ-jeCt_og3kxKvs7KbkTACjH4Oo93CUFCrmXVZFM25IZOiiqoApyitUbA-LrNUvB9uqXbdnYuPuhylkxhGB4jCZhOX2MXXcqJ7t87mCEX7Zjxt5iuyL-cIpXnu5Xr7k8uhTVNsFR8YiW5NwsqEOolzEApyvJgBWElg
+[vagrant@kmaster ~]$ ls
+[vagrant@kmaster ~]$ vi tomcat.yml
+[vagrant@kmaster ~]$ kubectl create -f tomcat.yml
+error: error parsing tomcat.yml: error converting YAML to JSON: yaml: line 8: mapping values are not allowed in this context
+[vagrant@kmaster ~]$ kubectl apply -f tomcat.yml
+error: error parsing tomcat.yml: error converting YAML to JSON: yaml: line 8: mapping values are not allowed in this context
+[vagrant@kmaster ~]$ mv tomcat.yml tomcat.yaml
+[vagrant@kmaster ~]$ kubectl apply -f tomcat.yml
+error: the path "tomcat.yml" does not exist
+[vagrant@kmaster ~]$ kubectl apply -f tomcat.yaml
+error: error parsing tomcat.yaml: error converting YAML to JSON: yaml: line 8: mapping values are not allowed in this context
+[vagrant@kmaster ~]$ kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+nginx-65f88748fd-h57hm   0/1     Pending   0          58m
+test-7fc7ffdd97-b8rgp    0/1     Pending   0          58m
+test-7fc7ffdd97-fprbn    0/1     Pending   0          58m
+test-7fc7ffdd97-hs4wk    0/1     Pending   0          58m
+test-7fc7ffdd97-mfh2x    0/1     Pending   0          58m
+test-7fc7ffdd97-x2rgh    0/1     Pending   0          58m
+[vagrant@kmaster ~]$ kubectl get deployment -o wide
+NAME    READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES   SELECTOR
+nginx   0/1     1            0           59m   nginx        nginx    app=nginx
+test    0/5     5            0           59m   test         nginx    run=test
+[vagrant@kmaster ~]$ kubectl get service -o wide
+NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE   SELECTOR
+kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP        12h   <none>
+nginx        NodePort    10.110.239.235   <none>        80:31389/TCP   59m   app=nginx
+[vagrant@kmaster ~]$ kubectl get nodes
+NAME                   STATUS     ROLES    AGE   VERSION
+kmaster.example.com    Ready      master   12h   v1.14.2
+kworker1.example.com   NotReady   <none>   12h   v1.14.2
+kworker2.example.com   NotReady   <none>   12h   v1.14.2
+[vagrant@kmaster ~]$ curl localhost:80
+curl: (7) Failed connect to localhost:80; Connection refused
+[vagrant@kmaster ~]$ curl http://localhost:80
+curl: (7) Failed connect to localhost:80; Connection refused
+[vagrant@kmaster ~]$ ls
+tomcat.yaml
+[vagrant@kmaster ~]$ vi nginx.yaml
+[vagrant@kmaster ~]$ kubectl apply -f nginx.yaml
+error: error validating "nginx.yaml": error validating data: [ValidationError(Deployment): unknown field "containers" in io.k8s.api.extensions.v1beta1.Deployment, ValidationError(Deployment): unknown field "image" in io.k8s.api.extensions.v1beta1.Deployment, ValidationError(Deployment): unknown field "name" in io.k8s.api.extensions.v1beta1.Deployment, ValidationError(Deployment): unknown field "ports" in io.k8s.api.extensions.v1beta1.Deployment, ValidationError(Deployment): unknown field "replicas" in io.k8s.api.extensions.v1beta1.Deployment, ValidationError(Deployment): unknown field "run" in io.k8s.api.extensions.v1beta1.Deployment]; if you choose to ignore these errors, turn validation off with --validate=false
+[vagrant@kmaster ~]$ vi nginx.yaml
+[vagrant@kmaster ~]$ vi service.yaml
+[vagrant@kmaster ~]$ kubectl apply -f nginx.yaml
+error: error validating "nginx.yaml": error validating data: [ValidationError(Deployment): unknown field "containers" in io.k8s.api.extensions.v1beta1.Deployment, ValidationError(Deployment): unknown field "image" in io.k8s.api.extensions.v1beta1.Deployment, ValidationError(Deployment): unknown field "name" in io.k8s.api.extensions.v1beta1.Deployment, ValidationError(Deployment): unknown field "ports" in io.k8s.api.extensions.v1beta1.Deployment, ValidationError(Deployment): unknown field "replicas" in io.k8s.api.extensions.v1beta1.Deployment, ValidationError(Deployment): unknown field "run" in io.k8s.api.extensions.v1beta1.Deployment]; if you choose to ignore these errors, turn validation off with --validate=false
+[vagrant@kmaster ~]$ cat nginx.yaml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+name: my-nginx
+spec:
+replicas: 1
+template:
+metadata:
+labels:
+run: my-nginx
+spec:
+containers:
+- name: my-nginx
+image: nginx
+ports:
+- containerPort: 80
+[vagrant@kmaster ~]$ cat service
+cat: service: No such file or directory
+[vagrant@kmaster ~]$ cat service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+name: my-nginx
+spec:
+ports:
+- name: "www"
+port: 80
+targetPort: 80
+selector:
+run: my-nginx
+type: LoadBalancer
+[vagrant@kmaster ~]$
